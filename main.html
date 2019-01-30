@@ -17,7 +17,7 @@
             <li><a href="#"><i class="material-icons">chat</i></a></li>
             <li><a href="#"><i class="material-icons">email</i></a></li>
             <li><a href="#"><i class="material-icons">notifications</i></a></li>
-            <li><a href="#"><i class="material-icons">person</i></a></li>
+            <li><a href="#" class="dropdown-trigger" data-target="user_menu"><i class="material-icons">person</i></a></li>
             <li id='nav-menu' data-target='slide-out' class='sidenav-trigger show-on-large'>
               <a href="#">
                 <i class="material-icons">menu</i>
@@ -26,6 +26,21 @@
           </ul>
         </div>
       </nav>
+      <ul id="user_menu" class="dropdown-content">
+        <li><a href="#">
+          <i class="material-icons">face</i>
+          <span>Profile</span>
+        </a></li>
+        <li><a href="#">
+          <i class="material-icons">settings</i>
+          <span>Settings</span>
+        </a></li>
+        <li class="divider"></li>
+        <li><a href="#">
+          <i class="material-icons">power_settings_new</i>
+          <span>Logout</span>
+        </a></li>
+      </ul>
       <ul id='slide-out' class="sidenav">
         <li>
             <div class="user-view">
@@ -296,22 +311,30 @@
         </div>
       </div>
       <p id="width"></p>
+
+      <!-- Botón para cambiar de tema -->
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+          TEMA
+        </a>
+        <ul>
+          <li id="tema-oscuro"><a class="btn-floating black"></a></li>
+          <li id="tema-claro"><a class="btn-floating white"></a></li>
+          <li id="tema-default"><a class="btn-floating blue"></a></li>
+        </ul>
+      </div>
+
     </main>
     <footer class="page-footer light-blue darken-4"></footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
     <script>
     $(document).ready(function() {
-      
-      // $(window).resize(function() {
-      //   $('#width').text($(window).width() + ' px');
-      //   $('#width').css('color', 'white');
-      //   $('#width').css('position', 'fixed');
-      //   $('#width').css('left', '0');
-      //   $('#width').css('bottom', '0');
-      // });
 
       M.AutoInit();
+
+      M.toast({html: 'Tema por defecto activo'});
+      M.toast({html: 'Prueba cambiar de tema. (botón \'TEMA\' a la derecha)'});
 
       document.addEventListener('DOMContentLoaded', function() {
         let elems = document.querySelectorAll('.sidenav')
@@ -319,7 +342,75 @@
 
         let collapsibleElem = document.querySelector('.collapsible');
         let collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+      
+        let floatingButtonElems = document.querySelector('.fixed-action-btn');
+        let actionButtonInstances = M.FloatingActionButton.init(floatingButtonElems, options);
+      
       });
+
+      const $body = $('body');
+      const $lightblue = $('.light-blue');
+      const $blue = $('.blue');
+      const $cards = $('.card');
+      const $lighten1 = $('.lighten-1');
+      const $lighten3 = $('.lighten-3');
+      const $lighten4 = $('.lighten-4');
+      const $thead = $('thead');
+
+      // Tema oscuro
+      $('#tema-oscuro').on('click', function() {
+        
+        $lightblue.removeClass('light-blue').addClass('blue-grey');
+        $blue.removeClass('blue').addClass('blue-grey darken-3');
+        $cards.addClass('blue-grey darken-4 blue-grey-text text-lighten-4');
+        $body.removeClass('grey').addClass('black');
+        $lighten4.removeClass('lighten-4').addClass('darken-1');
+        $thead.removeClass('blue-grey darken-4').addClass('grey darken-3');
+        $lighten1.removeClass('lighten-1').addClass('darken-1');
+        $lighten3.removeClass('lighten-3').addClass('darken-2');
+
+        M.toast({html: 'Cambiado a tema oscuro'});
+
+      });
+
+      // Tema claro
+      $('#tema-claro').on('click', function() {
+        
+        // TODO
+
+        $lightblue.removeClass('light-blue').addClass('blue-grey');
+        $blue.removeClass('blue').addClass('blue-grey darken-3');
+        $cards.addClass('blue-grey darken-4 blue-grey-text text-lighten-4');
+        $body.removeClass('grey').addClass('blue-grey lighten-4');
+        $lighten4.removeClass('lighten-4').addClass('darken-1');
+        $thead.removeClass('blue-grey darken-4').addClass('grey darken-3');
+        $lighten1.removeClass('lighten-1').addClass('darken-1');
+        $lighten3.removeClass('lighten-3').addClass('darken-2');
+
+        M.toast({html: 'Cambiado a tema oscuro'});
+
+      });
+
+      // Tema por defecto
+      $('#tema-oscuro').on('click', function() {
+        
+
+        // TODO
+
+
+        $lightblue.removeClass('light-blue').addClass('blue-grey');
+        $blue.removeClass('blue').addClass('blue-grey darken-3');
+        $cards.addClass('blue-grey darken-4 blue-grey-text text-lighten-4');
+        $body.removeClass('grey').addClass('black');
+        $lighten4.removeClass('lighten-4').addClass('darken-1');
+        $thead.removeClass('blue-grey darken-4').addClass('grey darken-3');
+        $lighten1.removeClass('lighten-1').addClass('darken-1');
+        $lighten3.removeClass('lighten-3').addClass('darken-2');
+
+        M.toast({html: 'Cambiado a tema oscuro'});
+
+      });
+
 
     });
     </script>

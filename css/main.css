@@ -14,8 +14,6 @@ main { flex: 1 0 auto; }
 
 #row1, #row2 { margin: 1em; }
 
-#row2 .col:nth-child(1) .card-image { height: 15em; }
-
 #tabla-accesos .row:first-child { margin-bottom: 0;  padding-bottom: 0; }
 
 #row3 .card-title { margin-bottom: 1.5em; }
@@ -45,6 +43,8 @@ main { flex: 1 0 auto; }
     margin-right: .2em;
   }
 
+  #row2 .col:nth-child(1) .card-image { height: 15em; }
+
   #tabla-accesos {padding: 1em;}
 
   #row3 .card-image { margin-right: 5em; }
@@ -54,8 +54,42 @@ main { flex: 1 0 auto; }
   }
 }
 
-@media screen and (max-width: 992px) 
-{#row3 .card-content {padding: 1em 0em;}}
+@media screen and (max-width: 992px)  {
+  
+  #row3 .card-content {padding: 1em 0em;}
+
+  #portrait-group {
+    background-color: #666;
+    border-radius: 3em;
+    width: 45%;
+  }
+  
+  #miniportrait {
+    width: 25%;
+    margin-right: .2em;
+  }
+
+  #row2 .col:nth-child(1) .card-image { height: 30em; }
+
+  @media screen and (max-width: 600px) {
+
+    #row2 .col:nth-child(1) .card-image { height: 20em; }
+  }
+
+  #portrait-group {
+    background-color: #666;
+    border-radius: 5em;
+    width: 75%;
+    height: auto;
+  }
+  
+  #miniportrait {
+    width: 25%;
+    margin-right: .2em;
+  }
+
+}
+
 
 
 
