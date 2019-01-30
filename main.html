@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection"/><!--Import materialize.css-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>IES Demo</title>
+  </head>
+  <body class="grey darken-4">
+    <header>
+      <nav>
+        <div class="nav-wrapper light-blue darken-4">
+          <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>IES Demo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#"><i class="material-icons">chat</i></a></li>
+            <li><a href="#"><i class="material-icons">email</i></a></li>
+            <li><a href="#"><i class="material-icons">notifications</i></a></li>
+            <li><a href="#"><i class="material-icons">person</i></a></li>
+            <li id='nav-menu' data-target='slide-out' class='sidenav-trigger show-on-large'>
+              <a href="#">
+                <i class="material-icons">menu</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <ul id='slide-out' class="sidenav">
+        <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="imgs/flor.jpg"/>
+              </div>  
+              <a href='#user'><img class="circle" src="imgs/orc_portrait.jpg"/></a>
+              <a href='#name'><span class="white-text name">Benjamin Adam Nagy</span></a>
+              <a href='#email'><span class="white-text email">benjaminadam.nagy@sonfe.net</span></a>
+            </div>
+        </li>
+        <li>
+          <ul class='collapsible'>
+            <li>
+              <a class="collapsible-header">
+                <i class='material-icons left'>mouse</i>
+                A un clic
+                <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">Missatgería interna</a></li>
+                <li><a href="#!">Horaris</a></li>
+                <li><a href="#!">Calendari</a></li>
+                <li><a href="#!">Les meves dades</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class='collapsible'>
+              <li>
+                <a class="collapsible-header">
+                  <i class='material-icons left'>library_books</i>
+                    Documents
+                  <i class="material-icons right">arrow_drop_down</i></a>
+                  <div class="collapsible-body">
+                  <ul>
+                    <li><a href="#!">Accés als models i documents</a></li>
+                    <li><a href="#!">Documents planificació</a></li>
+                    <li><a href="#!">Documentació externa</a></li>
+                    <li><a href="#!">Galería d'imatges</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <ul class='collapsible'>
+            <li>
+              <a class="collapsible-header">
+                <i class='material-icons left'>school</i>
+                Avaluació i Tutoria
+                <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">Indicadors generals</a></li>
+                <li><a href="#!">Entrada d'enquestes</a></li>
+                <li><a href="#!">Mobilitat</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class='collapsible'>
+            <li>
+              <a class="collapsible-header">
+                <i class='material-icons left'>people</i>
+                Qui és qui?
+                <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">Órgan de direcció</a></li>
+                <li><a href="#!">Departaments</a></li>
+                <li><a href="#!">Coordinadors</a></li>
+                <li><a href="#!">Personal</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class='collapsible'>
+            <li>
+              <a class="collapsible-header">
+                <i class='material-icons left'>help</i>
+                Què necessites
+                <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">Consulta i gestió d'inventari</a></li>
+                <li><a href="#!">Gestionar llibres de text</a></li>
+                <li><a href="#!">Consulta i gestió de biblioteca</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class='collapsible'>
+            <li>
+              <a class="collapsible-header">
+                <i class='material-icons left'>link</i>
+                Enllaços
+                <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">Educatius</a></li>
+                <li><a href="#!">Lingüístics</a></li>
+                <li><a href="#!">Cooperatius</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><div class="divider"></div></li>
+        <li>
+          <a href='#'><i class='material-icons'>power_settings_new</i>Logout</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <!-- Row 1 -->
+      <div id='row1'class="row">
+        <div class="col s12 m12 l4 cards-row1">
+          <div class="card horizontal">
+            <div class="card-image"><i class="medium material-icons">chat</i></div>
+            <div class="card-content">
+              <span class="row1-content">Enviau missatges al professorat del centre emprant la intranet
+              de l'IES.</span>
+              <div class="card-action">
+                <span class="blue-text left">MISSATGERÍA INTERNA</span>
+                <span class="new badge blue" data-badge-caption="NEW">4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l4 cards-row1">
+          <div class="card horizontal">
+            <div class="card-image"><i class="medium material-icons">email</i></div>
+            <div class="card-content">
+              <span class="row1-content">Consultau el correu electrònic. També podreu configurar-lo.</span>
+              <div class="card-action">
+                <span class="blue-text left">CORREU ELECTRÒNIC</span>
+                <span class="new badge orange" data-badge-caption="NEW">22</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l4 cards-row1">
+          <div class="card horizontal">
+            <div class="card-image"><i class="medium material-icons">whatshot</i></div>
+            <div class="card-content">
+              <span class="row1-content">Les darreres notícies més rellevants del centre.</span>
+              <div class="card-action">
+                <span class="blue-text left">CALENTET, CALENTET!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div id="row2" class="row">
+        <div class="col s12 m12 l4">
+          <div class="card cards-row2">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img src="imgs/1.jpg" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator">Perfil d'usuari
+                <i class="material-icons right">expand_less</i></span>
+                <div id="portrait-group" class="valign-wrapper">
+                  <img id="miniportrait" class="circle" src="imgs/orc_portrait.jpg"/>
+                  <span>Benjamin Adam Nagy</span>
+                </div>
+                <a class="right "href="#">Modifica</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title">Perfil d'usuari
+                <i class="material-icons right">close</i></span>
+                <p>Usuari: Benjamin Adam Nagy</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l8">
+          <div class="card cards-row2">
+            <div class="card-content">
+              <div class="card-title">
+                <div class="card-image"><i class="medium material-icons left">apps</i></div>
+                <p class="center-align">Accesos freqüents</p>
+              </div><br/>
+              <div id="tabla-accesos">
+                <div id='row1-tabla' class="row">
+                  <div class="col s12 m12 l4 center-align light-blue lighten-3">
+                    <i class="medium material-icons">event_note</i>
+                    <br/><br/>
+                    <p>Diari de classe</p><br/>
+                  </div>
+                  <div class="col s12 m12 l4 center-align blue lighten-1">
+                    <i class="medium material-icons">confirmation_number</i>
+                    <br/><br/>
+                    <p>Reserves</p><br/>
+                  </div>
+                  <div class="col s12 m12 l4 center-align light-blue lighten-3">
+                    <i class="medium material-icons">access_time</i>
+                    <br/><br/>
+                    <p>Horari</p><br/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 m12 l4 center-align blue lighten-1">
+                    <i class="medium material-icons">event</i>
+                    <br/><br/>
+                    <p>Calendari</p><br/>
+                  </div>
+                  <div class="col s12 m12 l4 center-align light-blue lighten-3">
+                    <i class="medium material-icons">class</i>
+                    <br/><br/>
+                    <p>Moodle</p><br/>
+                  </div>
+                  <div class="col s12 m12 l4 center-align blue lighten-1">
+                    <i class="medium material-icons">spellcheck</i>
+                    <br/><br/>
+                    <p>Recursos lingüístics</p><br/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 3 -->
+      <div id='row3' class="row">
+        <div class="col s12 m12 l12">
+          <div class="card">
+            <div class="card-content">
+                <div class="card-image left"><i class="medium material-icons">notifications_none</i></div>
+              <div class="card-title">
+                <p>Pròxims events</p>
+              </div>
+              <table class="striped">
+                <thead class="light-blue darken-4 white-text">
+                  <tr>
+                    <th>De</th>
+                    <th>Assumpte</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="light-blue lighten-4">
+                    <td>Direcció</td>
+                    <td>Claustre</td>
+                    <td>12/04/2018</td>
+                    <td>14:00</td>
+                  </tr>
+                  <tr class="light-blue lighten-3">
+                    <td>Departament Informàtica</td>
+                    <td>Reunió de departament</td>
+                    <td>12/04/2018</td>
+                    <td>15:00</td>
+                  </tr>
+                  <tr class="light-blue lighten-4">
+                    <td>Departament Informàtica</td>
+                    <td>Reunió de FCT</td>
+                    <td>13/04/2018</td>
+                    <td>17:20</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="width"></p>
+    </main>
+    <footer class="page-footer light-blue darken-4"></footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      
+      // $(window).resize(function() {
+      //   $('#width').text($(window).width() + ' px');
+      //   $('#width').css('color', 'white');
+      //   $('#width').css('position', 'fixed');
+      //   $('#width').css('left', '0');
+      //   $('#width').css('bottom', '0');
+      // });
+
+      M.AutoInit();
+
+      document.addEventListener('DOMContentLoaded', function() {
+        let elems = document.querySelectorAll('.sidenav')
+        let instances = M.Sidenav.init(elems, options);
+
+        let collapsibleElem = document.querySelector('.collapsible');
+        let collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+      });
+
+    });
+    </script>
+  </body>
+</html>

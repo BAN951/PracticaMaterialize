@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection"/><!--Import materialize.css-->
+    <link rel="stylesheet" href="css/login.css"/>
+    <title>Log In</title>
+  </head>
+  <body class="grey darken-4">
+    <div id='login-fent' class="row">
+      <div class="col s12 m12 l12 light-blue darken-3">
+        <marquee class="white-text">|</marquee>
+      </div>
+    </div>
+    <div class="row">
+      <div id='login' class="col s12 l4 offset-l4">
+        <div class="card white hoverable">
+          <div class="card-content">
+            <div class="card-title center-align light-blue darken-4 white-text">
+              <h4>ACCÉS A LA WEB</h4>
+              <p><small>Autentificació per entrar a la intranet</small></p>
+            </div>
+            <div id="login-form">
+              <div class="input-field">
+                <input id="nombre-usuario" type="text" class="validate" />
+                <label for="nombre-usuario">Usuari:</label>
+              </div>
+              <div class="input-field">
+                <input id="passwd" type="password" class="validate" />
+                <label for="passwd">Contrasenya:</label>
+              </div>
+              <button class="btn waves-effect waves-light light-blue darken-4 white-text" type="submit"
+              onclick="window.location.href='main.html'">
+              Entrar<i class="material-icons right">send</i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <a href='main.html'>Enllaç directe</a>
+    </div>
+  </div>
+  <div id='login-lent' class="row">
+    <div class="col s12 m12 l12 light-blue darken-3">
+      <marquee class="white-text">|</marquee>
+    </div>
+  </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

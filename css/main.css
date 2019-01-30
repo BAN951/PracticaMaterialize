@@ -1,0 +1,62 @@
+* { margin: 0; padding: 0; }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#nav-menu { padding-left: 2em; }
+
+nav div { padding-left: 1em; }
+
+main { flex: 1 0 auto; }
+
+#row1, #row2 { margin: 1em; }
+
+#row2 .col:nth-child(1) .card-image { height: 15em; }
+
+#tabla-accesos .row:first-child { margin-bottom: 0;  padding-bottom: 0; }
+
+#row3 .card-title { margin-bottom: 1.5em; }
+
+@media screen and (min-width: 992px) {
+  
+  #row1 .col .card {height: 10em;}
+
+  #row1 .col .card .card-content span:first-child {
+    display: block;
+    height: 2em;
+  }
+  
+ #row1 .card-action {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  } 
+
+  #portrait-group {
+    background-color: #666;
+    border-radius: 2em;
+    width: 75%;
+  }
+  
+  #miniportrait {
+    width: 15%;
+    margin-right: .2em;
+  }
+
+  #tabla-accesos {padding: 1em;}
+
+  #row3 .card-image { margin-right: 5em; }
+
+  @media screen and (max-width: 1220px) {
+    #row1 .card-action .blue-text {margin-left: -4.5em;}
+  }
+}
+
+@media screen and (max-width: 992px) 
+{#row3 .card-content {padding: 1em 0em;}}
+
+
+
+

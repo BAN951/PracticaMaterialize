@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; }
+
+#login {
+  padding-bottom: 1em;
+  margin-top: 10%;
+}
+
+#login .card .card-content {
+  padding: 0;
+}
+
+#login .card .card-content .card-title {
+  padding-top: .5em;
+  padding-bottom: .2em;
+}
+
+#login-form {
+  padding: 1em ;
+  padding-top: .5em;
+}
+
+#login-fent {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#login-lent {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
