@@ -318,9 +318,8 @@
           TEMA
         </a>
         <ul>
-          <li id="tema-oscuro"><a class="btn-floating black"></a></li>
-          <li id="tema-claro"><a class="btn-floating white"></a></li>
-          <li id="tema-default"><a class="btn-floating blue"></a></li>
+          <li id="tema-oscuro"><a class="btn-floating btn-large black"><small>Dark</small></a></li>
+          <li id="tema-default"><a class="btn-floating btn-large blue"><small>Normal</small></a></li>
         </ul>
       </div>
 
@@ -333,7 +332,7 @@
 
       M.AutoInit();
 
-      M.toast({html: 'Tema por defecto activo'});
+      M.toast({html: 'Tema por defecto (Azul)'});
       M.toast({html: 'Prueba cambiar de tema. (botón \'TEMA\' a la derecha)'});
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -356,59 +355,34 @@
       const $lighten3 = $('.lighten-3');
       const $lighten4 = $('.lighten-4');
       const $thead = $('thead');
+      const $temadefault = $('#tema-default a');
+      const $nav = $('.nav-wrapper');
+
+      let tema = '';
 
       // Tema oscuro
       $('#tema-oscuro').on('click', function() {
-        
-        $lightblue.removeClass('light-blue').addClass('blue-grey');
-        $blue.removeClass('blue').addClass('blue-grey darken-3');
-        $cards.addClass('blue-grey darken-4 blue-grey-text text-lighten-4');
-        $body.removeClass('grey').addClass('black');
-        $lighten4.removeClass('lighten-4').addClass('darken-1');
-        $thead.removeClass('blue-grey darken-4').addClass('grey darken-3');
-        $lighten1.removeClass('lighten-1').addClass('darken-1');
-        $lighten3.removeClass('lighten-3').addClass('darken-2');
+        if(tema != 'oscuro') {
+          $lightblue.removeClass('light-blue').addClass('blue-grey');
+          $blue.removeClass('blue').addClass('blue-grey darken-3');
+          $cards.addClass('blue-grey darken-4 blue-grey-text text-lighten-4');
+          $body.removeClass('grey').addClass('black');
+          $lighten4.removeClass('lighten-4').addClass('darken-1');
+          $thead.removeClass('blue-grey darken-4').addClass('grey darken-3');
+          $lighten1.removeClass('lighten-1').addClass('lighten-2');
+          $lighten3.removeClass('lighten-3').addClass('lighten-1');
+          $temadefault.removeClass('blue-grey darken-3').addClass('blue');
 
-        M.toast({html: 'Cambiado a tema oscuro'});
-
-      });
-
-      // Tema claro
-      $('#tema-claro').on('click', function() {
-        
-        // TODO
-
-        $lightblue.removeClass('light-blue').addClass('blue-grey');
-        $blue.removeClass('blue').addClass('blue-grey darken-3');
-        $cards.addClass('blue-grey darken-4 blue-grey-text text-lighten-4');
-        $body.removeClass('grey').addClass('blue-grey lighten-4');
-        $lighten4.removeClass('lighten-4').addClass('darken-1');
-        $thead.removeClass('blue-grey darken-4').addClass('grey darken-3');
-        $lighten1.removeClass('lighten-1').addClass('darken-1');
-        $lighten3.removeClass('lighten-3').addClass('darken-2');
-
-        M.toast({html: 'Cambiado a tema oscuro'});
-
+          M.toast({html: 'Cambiado a tema oscuro'});
+          tema = 'oscuro';
+        } 
+        else { M.toast({html: 'Ya tienes activo el tema oscuro'}) } 
       });
 
       // Tema por defecto
-      $('#tema-oscuro').on('click', function() {
-        
-
-        // TODO
-
-
-        $lightblue.removeClass('light-blue').addClass('blue-grey');
-        $blue.removeClass('blue').addClass('blue-grey darken-3');
-        $cards.addClass('blue-grey darken-4 blue-grey-text text-lighten-4');
-        $body.removeClass('grey').addClass('black');
-        $lighten4.removeClass('lighten-4').addClass('darken-1');
-        $thead.removeClass('blue-grey darken-4').addClass('grey darken-3');
-        $lighten1.removeClass('lighten-1').addClass('darken-1');
-        $lighten3.removeClass('lighten-3').addClass('darken-2');
-
-        M.toast({html: 'Cambiado a tema oscuro'});
-
+      $('#tema-default').on('click', function() {
+        M.toast({html: 'Cambiado a tema por defecto'});
+        location.reload();
       });
 
 
